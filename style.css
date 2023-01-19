@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+
+.wrapper{
+    display: grid;
+    place-content: center;
+    margin: 50px auto;
+    width: 900px;
+    height: fit-content;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 5px 5px lightgray;
+}
+
+.wrapper header{
+    display: grid;
+    place-content: center;
+    width: inherit;
+    padding: 35px 0px;
+    background-color: #1F75FE;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    outline: none;
+
+}
+
+.wrapper header .heading{
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #fffF;
+    pointer-events: none !important;
+}
+
+.wrapper header .listInputBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+.wrapper header .listInputBox .input .material-symbols-outlined{
+    font-size: 52px;
+    color: gray;
+}
+
+.wrapper header .listInputBox .input{
+    border: 3px solid black;
+    background-color: #ffff;
+    border: none;
+    border-radius: 5px;
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Add-task-input{
+    width: 600px;
+    height: 52px;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;  
+}
+
+#Add-task-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 52px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #1F75FE;
+    cursor: pointer;
+    background-color: #ffff;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+#Add-task-btn.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#Add-task-btn:hover{
+    background: #008200;
+    color: #ffff;
+}
+
+section{
+    padding: 40px 40px 10px 40px;
+}
+
+.NewHead{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #c6dcfe;   
+}
+
+section .list input{
+    margin:  0px 10px;
+    font-size: 22px;
+    flex: 1 1 0%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 1.2s ease-in-out;
+    border: none;
+    background: inherit;
+    outline: none;
+}
+
+section .list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* background-color: antiquewhite; */
+    background-color: #c6dcfe;
+    position: relative;
+    overflow: hidden;
+
+}
+
+section .list .todo-task.decorate{
+    color: rgb(0,0,0,0.5);
+    opacity: 0.5;
+    text-decoration: line-through;   
+}
+
+.focus{
+    color: #0765fd;
+    user-select: text;
+    text-indent: 25px;
+    transform: scale(1.03);
+}
+
+section .list .task-features{
+    position: absolute;
+    right: -110px;
+    cursor: pointer;
+    height: 52px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #1F75FE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+section .list .task-features .material-symbols-outlined{
+    margin: 3px;
+    font-size: 25px;
+}
+
+#tick:hover{
+    transform: scale(1.3);
+}
+
+#edit:hover{
+    transform: scale(1.3);
+}
+
+#delete:hover{
+    transform: scale(1.3);
+}
+section .list:hover .task-features{
+    position: absolute;
+    right: 0px;
+}
+
+footer{
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
